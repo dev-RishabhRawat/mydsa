@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;binarySearch&apos; to &apos;NinjasCoding/src/arrays&apos;&#x0D;&#x0A;- Original project: &apos;java_bootcamp&apos;&#x0D;&#x0A;- Destination element: &apos;NinjasCoding/src/arrays&apos;&#x0D;&#x0A;- Original element: &apos;java_bootcamp/src/binarySearch&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=NinjasCoding/src&lt;arrays" element1="/src&lt;binarySearch" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1644066615727" version="1.0"/>
+</session>

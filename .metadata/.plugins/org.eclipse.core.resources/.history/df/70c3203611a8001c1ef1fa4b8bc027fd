@@ -1,0 +1,26 @@
+package cpa20march;
+
+import java.util.*;
+public class MyClass {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Flowers[] flower = new Flowers[4];
+		for(int i=0;i<flower.length;i++) {
+			int flowerId = sc.nextInt();
+			sc.nextLine();
+			String name = sc.nextLine();
+			int price = sc.nextInt();
+			int rating = sc.nextInt();
+			sc.nextLine();
+			String type = sc.nextLine();
+			flower[i] = new Flower(flowerId,name,price,rating,type);
+		}
+		
+		for(int i=0;i<flower.length;i++) {
+			System.out.println(flower[i].getFlowerId());
+		}
+	}
+
+}

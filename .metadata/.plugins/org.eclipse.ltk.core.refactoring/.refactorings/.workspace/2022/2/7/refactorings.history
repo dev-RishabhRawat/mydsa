@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Recursion&apos; to &apos;recursioin&apos;" description="Rename resource &apos;Recursion&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Recursion" name="recursioin" stamp="1644217727787" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;recursioin&apos; to &apos;recursion&apos;" description="Rename resource &apos;recursioin&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/recursioin" name="recursion" stamp="1644217746047" updateReferences="true"/>
+</session>
