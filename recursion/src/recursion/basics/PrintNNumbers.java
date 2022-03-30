@@ -2,7 +2,7 @@ package recursion.basics;
 
 public class PrintNNumbers {
 	public static void print(int n) {
-		if(n==5) {
+		if(n==5)  {
 			System.out.println(n);
 			return;
 		}

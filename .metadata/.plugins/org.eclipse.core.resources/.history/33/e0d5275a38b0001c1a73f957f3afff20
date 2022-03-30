@@ -1,0 +1,30 @@
+package backtracking;
+
+import java.util.Arrays;
+
+public class BacktrackingProblems {
+
+	public static int maze(int[] arr,int row,int col) {
+	  if(row == arr.length-1 && col == arr.length-1 ) {
+		  return 1;
+	  }
+	  
+	  int dCount = maze(arr,col+1,row);
+	  int rCount = maze(arr,col,row+1);
+	  return dCount + rCount;
+
+	  
+	}
+	
+	
+	public static void main(String[] args) {
+		int[][] arr = new int[3][3];
+		Arrays.fill(arr, 1);
+		for(int i=0;i<3;i++) {
+			System.out.println(Arrays.toString(arr[i]));
+		}
+		
+	}
+	
+	 
+}
