@@ -1,0 +1,36 @@
+package dynamicprogramming;
+
+public class CheckPerfectSquare {
+    public static boolean isPerfectSquare(int i) {
+		
+		/*
+		 
+		Check a number is perfect square or not
+		 
+		The approach, we have followed is:
+
+			First, find out the square root of the given number.
+			Calculate the floor value of the calculated square root.
+			Find the difference of the floor value with the square root that we have find in step 1.
+			At last, compare the value (that we get in step 3) with 0. If the value is equal to 0 the given number is perfect square, else not.
+			Let's understand the above stapes through an example.
+
+			Example: Check the number 324 is perfect square or not.
+
+			The square root of 324 is 18.
+			The floor value of the square root is 18.
+			The difference of square root and floor value is 0.
+			The difference is equal to 0. Hence, the given number is perfect square.
+			*/
+		double sqrt = Math.sqrt(i);
+		double floor = Math.floor(sqrt);
+		return sqrt-floor == 0;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n=25;
+		boolean res = isPerfectSquare(n);
+		System.out.println(res);
+
+	}
+}

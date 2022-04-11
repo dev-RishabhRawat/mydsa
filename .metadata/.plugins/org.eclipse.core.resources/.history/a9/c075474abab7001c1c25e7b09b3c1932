@@ -1,0 +1,42 @@
+package dynamicprogramming;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class MInCostPath {
+	public static void main(String[] args) {
+		int n = 3,m=3;
+		int[][] mat = {{1,5,11},{8,3,12},{2,3,7}};
+		int[] dp = new int[n*m];
+		Arrays.fill(dp, -1);
+		ArrayList<Integer> list = findMinPath(mat,0,0,dp,0,"");
+		System.out.println(Collections.min(list));
+		
+	}
+
+	private static ArrayList<Integer> findMinPath(int[][] mat, int r, int c, int[] dp,int ctr,String p) {
+		if(r == mat.length-1 && c == mat[0].length-1) {
+			ctr = ctr + mat[r][c];
+			System.out.println(p);
+			ArrayList<Integer> list = new ArrayList<>();
+			list.add(ctr);
+			return list;
+		}
+		ArrayList<Integer> list = new ArrayList<>();
+		
+		if(r<mat.length-1) {
+			list.addAll(findMinPath(mat,r+1,c,dp,ctr+mat[r][c] ,p+'R'));
+		}
+		if(c<mat[0].length-1) {
+			list.addAll(findMinPath(mat,r,c+1,dp,ctr+mat[r][c] ,p+'D'));
+		}
+		if(r<mat.length-1 && c<mat[0].length-1) {
+			list.addAll(findMinPath(mat,r+1,c+1,dp,ctr+mat[r][c] ,p+'G'));
+		}
+		
+		return list;
+		
+		
+	}
+}

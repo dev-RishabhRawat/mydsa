@@ -1,0 +1,56 @@
+package dynamicprogramming;
+
+public class MinSquareToN {
+	public static int minSqr(int n) {
+		// we will find nearest perfect square less than n
+		// then subtract it from n what ever we get add 1 to it that will be our ans
+		// eg 7 nearest perfect square is 4 = 2^2
+		// 7-4 = 3
+		// 3+1  => i.e 1^2 + 1^2 + 1^2 + 2^2 = 7
+		
+		// now question is how will i check that number is perfect square...
+		
+		/*
+		The approach, we have followed is:
+
+			First, find out the square root of the given number.
+			Calculate the floor value of the calculated square root.
+			Find the difference of the floor value with the square root that we have find in step 1.
+			At last, compare the value (that we get in step 3) with 0. If the value is equal to 0 the given number is perfect square, else not.
+			Let's understand the above stapes through an example.
+
+			Example: Check the number 324 is perfect square or not.
+
+			The square root of 324 is 18.
+			The floor value of the square root is 18.
+			The difference of square root and floor value is 0.
+			The difference is equal to 0. Hence, the given number is perfect square.
+			*/
+		int sqr = 0;
+		for(int i=n;i>0;i--) {
+			if(isPerfectSquare(i)) {
+				sqr = i;
+				break;
+			}
+		}
+		System.out.println(sqr);
+		
+		return (n-sqr)+1;//nearest perfect square plus 1 1 1 1 ....
+		
+	}
+	private static boolean isPerfectSquare(int i) {
+		// TODO Auto-generated method stub
+		double sqrt = Math.sqrt(i);
+		
+		System.out.println(sqrt-Math.floor(i));
+		return sqrt-Math.floor(i) == 0;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n=10;
+		int res = minSqr(n);
+		System.out.println(res);
+
+	}
+
+}

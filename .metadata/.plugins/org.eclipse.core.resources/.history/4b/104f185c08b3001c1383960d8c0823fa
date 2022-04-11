@@ -1,0 +1,20 @@
+package dynamicprogramming;
+
+public class MinSquareToN {
+
+	
+	public static void main(String[] args) {
+		int n = 10;
+		int res = getMinSqr(n);
+		System.out.println(res);
+	}
+
+	private static int getMinSqr(int n) {
+		if(CheckPerfectSquare.isPerfectSquare(n)))
+		
+		
+		return 0;
+	}
+	
+
+}

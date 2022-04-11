@@ -1,0 +1,29 @@
+package dynamicprogramming;
+
+public class LongestCommonSubSequence {
+	
+	public static int lcs(String s1, String s2,int i,int j) {
+		if(i == s1.length() || j == s2.length()) {
+			return 0;
+		}
+		char c1 = s1.charAt(i);
+		char c2 = s2.charAt(j);
+		int ans;
+		if(c1 == c2) {
+			ans = 1 + lcs(s1,s2,i+1,j+1);
+		}else {
+			int a1 = lcs(s1,s2,i+1,j);
+			int a2 = lcs(s1,s2,i,j+1);
+			ans = Math.max(a1, a2);
+		}
+		return ans;
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s1 = "bedgmc";
+		String s2 = "abdfglc";
+		System.out.println(lcs(s1,s2,0,0));
+	}
+
+}

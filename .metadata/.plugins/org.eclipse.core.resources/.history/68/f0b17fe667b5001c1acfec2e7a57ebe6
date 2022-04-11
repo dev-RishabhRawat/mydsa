@@ -1,0 +1,37 @@
+package dynamicprogramming;
+
+import java.util.Scanner;
+
+public class LootHouses {
+ public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int[] a = new int[n];
+	for(int i=0;i<n;i++) {
+		a[i] = sc.nextInt();
+	}
+	
+	int res = lootHouses(a,n);
+	System.out.println(res);
+	sc.close();
+}
+
+private static int lootHouses(int[] a, int n) {
+	if(n == 0) {
+		return 0;
+	}
+	int from0 = helper(a,n,0);
+	int max=Integer.MIN_VALUE;
+	int from1 = helper(a,n,1);
+	
+	max = Math.max(from0, from1);
+	return max;
+}
+
+private static int helper(int[] a, int n, int i) {
+   if(i>=n) {
+	   return 0;
+   }
+	return a[i]+helper(a,n,i+2);
+}
+}
